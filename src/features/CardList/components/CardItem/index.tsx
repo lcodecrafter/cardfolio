@@ -1,3 +1,5 @@
+import { Paper } from '@mantine/core';
+
 interface CardItemProps {
   name: string;
   imageUrl: string;
@@ -5,7 +7,7 @@ interface CardItemProps {
 
 export default function CardItem({ name, imageUrl }: CardItemProps) {
   return (
-    <div className='flex items-center border rounded-lg p-4'>
+    <Paper shadow='xs' p='xl'>
       {imageUrl && (
         <img
           src={imageUrl}
@@ -14,6 +16,6 @@ export default function CardItem({ name, imageUrl }: CardItemProps) {
         />
       )}
       <h4 className='text-lg font-semibold'>{name}</h4>
-    </div>
+    </Paper>
   );
 }
