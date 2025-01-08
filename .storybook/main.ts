@@ -1,19 +1,22 @@
-import type { StorybookConfig } from '@storybook/nextjs';
+import { StorybookConfig } from '@storybook/react-vite';
+import { mergeConfig } from 'vite';
+import customViteConfig from './vite.config.mjs';
 
 const config: StorybookConfig = {
-  stories: ['../src/**/*.mdx', '../src/**/story.@(js|jsx|mjs|ts|tsx)'],
+  stories: ['../src/**/story.@(js|jsx|mjs|ts|tsx)'],
   addons: [
-    '@storybook/addon-onboarding',
     '@storybook/addon-essentials',
     '@chromatic-com/storybook',
     '@storybook/addon-interactions',
-    '@storybook/addon-styling-webpack', // Add this line only if you are not using Vite
     'storybook-dark-mode',
   ],
   framework: {
-    name: '@storybook/nextjs',
+    name: '@storybook/react-vite',
     options: {},
   },
   staticDirs: ['../public'],
+  async viteFinal(config) {
+    return mergeConfig(config, customViteConfig);
+  },
 };
 export default config;
