@@ -15,6 +15,7 @@
     "@mantine/hooks": "^7.15.2",
     "@storybook/react-vite": "^8.4.7",
     "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
     "next": "15.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

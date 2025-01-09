@@ -1,6 +1,7 @@
 // Import styles of packages that you've installed.
 // All packages except `@mantine/hooks` require styles imports
 import '@mantine/core/styles.css';
+import './styles.css';
 
 import { useEffect } from 'react';
 import { addons } from '@storybook/preview-api';

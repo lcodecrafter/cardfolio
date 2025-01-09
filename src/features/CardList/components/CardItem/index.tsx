@@ -7,7 +7,7 @@ interface CardItemProps {
 
 export default function CardItem({ name, imageUrl }: CardItemProps) {
   return (
-    <Paper shadow='xs' p='xl'>
+    <Paper shadow='xs' p='xl' className='flex items-center w-fit'>
       {imageUrl && (
         <img
           src={imageUrl}
@@ -15,7 +15,7 @@ export default function CardItem({ name, imageUrl }: CardItemProps) {
           className='w-16 h-16 object-cover rounded-md mr-4'
         />
       )}
-      <h4 className='text-lg font-semibold'>{name}</h4>
+      <h4 className='text-5xl font-semibold'>{name}</h4>
     </Paper>
   );
 }
