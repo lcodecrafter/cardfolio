@@ -51,6 +51,9 @@ importers:
       '@storybook/blocks':
         specifier: ^8.4.7
         version: 8.4.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.4.7)
+      '@storybook/experimental-nextjs-vite':
+        specifier: ^8.4.7
+        version: 8.4.7(@babel/core@7.26.0)(@storybook/test@8.4.7(storybook@8.4.7))(next@15.1.0(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.4.7)(typescript@5.7.2)(vite@6.0.7(@types/node@20.17.11)(jiti@1.21.7)(sugarss@4.0.1(postcss@8.4.49))(terser@5.37.0)(yaml@2.7.0))
       '@storybook/nextjs':
         specifier: ^8.4.7
         version: 8.4.7(esbuild@0.24.2)(next@15.1.0(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.4.7)(type-fest@4.31.0)(typescript@5.7.2)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(esbuild@0.24.2))
@@ -64,10 +67,10 @@ importers:
         specifier: ^8.4.7
         version: 8.4.7(storybook@8.4.7)
       '@types/node':
-        specifier: ^20
+        specifier: ^20.17.11
         version: 20.17.11
       '@types/react':
-        specifier: ^19
+        specifier: ^19.0.2
         version: 19.0.2
       '@types/react-dom':
         specifier: ^19
@@ -1404,6 +1407,21 @@ packages:
 
   '@storybook/csf@0.1.13':
     resolution: {integrity: sha512-7xOOwCLGB3ebM87eemep89MYRFTko+D8qE7EdAAq74lgdqRR5cOUtYWJLjO2dLtP94nqoOdHJo6MdLLKzg412Q==}
+
+  '@storybook/experimental-nextjs-vite@8.4.7':
+    resolution: {integrity: sha512-bC+bfIJNzUDs0nETc9p3rIEcWWbDr9+lFKYrOURlXnJVc7jDy1qZZTaYQswhN36qEkFr+YKgpBAcrJhNDz0YWg==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      '@storybook/test': 8.4.7
+      next: ^14.1.0 || ^15.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+      storybook: ^8.4.7
+      typescript: '*'
+      vite: ^5.0.0 || ^6.0.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   '@storybook/global@5.0.0':
     resolution: {integrity: sha512-FcOqPAXACP0I3oJ/ws6/rrPT9WGhu915Cg8D02a9YxLo0DE9zI+a9A5gRGvmQ09fiWPukqI8ZAEoQEdWUKMQdQ==}
@@ -3191,6 +3209,9 @@ packages:
     resolution: {integrity: sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==}
     engines: {node: '>=16 || 14 >=14.17'}
 
+  module-alias@2.2.3:
+    resolution: {integrity: sha512-23g5BFj4zdQL/b6tor7Ji+QY4pEfNH784BMslY9Qb0UnJWRAt+lQGLYmRaM0KDBwIG23ffEBELhZDP2rhi9f/Q==}
+
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
@@ -4303,6 +4324,14 @@ packages:
   uuid@9.0.1:
     resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
     hasBin: true
+
+  vite-plugin-storybook-nextjs@1.1.1:
+    resolution: {integrity: sha512-v71ArofHo0nQkEPZQye6yqf1W/uaaopuI6YuqsaKqnHL0NYztDKBjey5nsRGDK6jqihgCTO/gyQOenYTgRpKvQ==}
+    peerDependencies:
+      '@storybook/test': ^8.3.0
+      next: ^14.1.0 || ^15.0.0
+      storybook: ^8.3.0
+      vite: ^5.0.0 || ^6.0.0
 
   vite@6.0.7:
     resolution: {integrity: sha512-RDt8r/7qx9940f8FcOIAH9PTViRrghKaK2K1jY3RaAURrEUbm9Du1mJ72G+jlhtG3WwodnfzY8ORQZbBavZEAQ==}
@@ -5847,6 +5876,25 @@ snapshots:
   '@storybook/csf@0.1.13':
     dependencies:
       type-fest: 2.19.0
+
+  '@storybook/experimental-nextjs-vite@8.4.7(@babel/core@7.26.0)(@storybook/test@8.4.7(storybook@8.4.7))(next@15.1.0(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.4.7)(typescript@5.7.2)(vite@6.0.7(@types/node@20.17.11)(jiti@1.21.7)(sugarss@4.0.1(postcss@8.4.49))(terser@5.37.0)(yaml@2.7.0))':
+    dependencies:
+      '@storybook/builder-vite': 8.4.7(storybook@8.4.7)(vite@6.0.7(@types/node@20.17.11)(jiti@1.21.7)(sugarss@4.0.1(postcss@8.4.49))(terser@5.37.0)(yaml@2.7.0))
+      '@storybook/react': 8.4.7(@storybook/test@8.4.7(storybook@8.4.7))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.4.7)(typescript@5.7.2)
+      '@storybook/test': 8.4.7(storybook@8.4.7)
+      next: 15.1.0(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+      storybook: 8.4.7
+      styled-jsx: 5.1.6(@babel/core@7.26.0)(react@19.0.0)
+      vite: 6.0.7(@types/node@20.17.11)(jiti@1.21.7)(sugarss@4.0.1(postcss@8.4.49))(terser@5.37.0)(yaml@2.7.0)
+      vite-plugin-storybook-nextjs: 1.1.1(@storybook/test@8.4.7(storybook@8.4.7))(next@15.1.0(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(storybook@8.4.7)(vite@6.0.7(@types/node@20.17.11)(jiti@1.21.7)(sugarss@4.0.1(postcss@8.4.49))(terser@5.37.0)(yaml@2.7.0))
+    optionalDependencies:
+      sharp: 0.33.5
+      typescript: 5.7.2
+    transitivePeerDependencies:
+      - '@babel/core'
+      - babel-plugin-macros
 
   '@storybook/global@5.0.0': {}
 
@@ -8065,6 +8113,8 @@ snapshots:
 
   minipass@7.1.2: {}
 
+  module-alias@2.2.3: {}
+
   ms@2.1.3: {}
 
   mz@2.7.0:
@@ -9333,6 +9383,20 @@ snapshots:
   utila@0.4.0: {}
 
   uuid@9.0.1: {}
+
+  vite-plugin-storybook-nextjs@1.1.1(@storybook/test@8.4.7(storybook@8.4.7))(next@15.1.0(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(storybook@8.4.7)(vite@6.0.7(@types/node@20.17.11)(jiti@1.21.7)(sugarss@4.0.1(postcss@8.4.49))(terser@5.37.0)(yaml@2.7.0)):
+    dependencies:
+      '@next/env': 15.1.0
+      '@storybook/test': 8.4.7(storybook@8.4.7)
+      image-size: 1.2.0
+      magic-string: 0.30.17
+      module-alias: 2.2.3
+      next: 15.1.0(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      storybook: 8.4.7
+      ts-dedent: 2.2.0
+      vite: 6.0.7(@types/node@20.17.11)(jiti@1.21.7)(sugarss@4.0.1(postcss@8.4.49))(terser@5.37.0)(yaml@2.7.0)
+    optionalDependencies:
+      sharp: 0.33.5
 
   vite@6.0.7(@types/node@20.17.11)(jiti@1.21.7)(sugarss@4.0.1(postcss@8.4.49))(terser@5.37.0)(yaml@2.7.0):
     dependencies:
