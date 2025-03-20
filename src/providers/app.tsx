@@ -1,9 +1,13 @@
-import { MantineProvider, createTheme } from '@mantine/core';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from '../theme';
 
 export default function AppProvider({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const theme = createTheme({});
-
-  return <MantineProvider theme={theme}>{children}</MantineProvider>;
+  return (
+    <AppRouterCacheProvider>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    </AppRouterCacheProvider>
+  );
 }
